@@ -25,7 +25,7 @@ int main (int argc, char ** argv)
 	strcpy(srvr_name.sa_data, SOCK_NAME);
 	strcpy(buf, "Hello, Unix sockets!");
 	sendto(sock, buf, strlen(buf), 0, &srvr_name,
-	 strlen(srvr_name.sa_data) + sizeof(srvr_name.sa_family));
+	 strlen(srvr_name.sa_data) + sizeof(srvr_name.sa_family)); //передаем данные (тестовую строку) серверу
 }
 
 
